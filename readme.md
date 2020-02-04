@@ -27,4 +27,31 @@ To protect your API-keys setting up a backend server with express, using node as
 - link files to origin
 - add and commit initial files
 
+## Branch 1 server-set-up
+Express is a node package that you can download and create a server for development purposes. You can access external API data with the ```fetch API``` or create your own routes from a unique resource locator (URL) with the Express router module.
 
+To connect routes, you set up a local host port and create a route (localhost:3000/name-of-route) for the API calls. This allows you to
+ - get data (a resource) from the local host URL
+ - post data (the resource) from the local host URL (by sending a request) to a database
+ - getting back the response from the database with the resource required
+ - updating the data (resource) on the local host URL with the data (resource, payload) of the data from the database
+
+With an external API as you are not setting up your own routes
+
+```
+const express = require('express');
+const app = express();
+const port = 3000;
+
+app.get('/', (req, res) => {
+	res.send('home route working');
+});
+
+app.listen(port, () => console.log(`server connected on ${port}`));
+```   
+
+ - set up your server and your home route and make sure the route works by going to the local host you have set up and the home page and you should see the text home route working
+
+ ```localhost:3000/```
+
+ if it does not work, debug at this stage
