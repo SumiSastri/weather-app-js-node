@@ -85,16 +85,18 @@ if it does not work, debug at this stage
 
 Now you are set to set up your environment keys safely
 - check that the dotenv file is in your gitignore file 
+[.env]
+
 - create a dotenv file to store the keys
+[touch .env]
+
 ```
 APINAME_API_KEY=<your key>
 ```
-- import the dot env files into the express server
-```
 if (process.env.NODE_ENV !== 'production') {
-	require('dotenv').config;
-} 
-const APINAME_API_KEY = process.env.APINAME_API_KEY;
+	require('dotenv').config();
+}
+const APIKEYNAME_API_KEY = process.env.APIKEYNAME_API_KEY;
 ```
 
 Debugging at this stage
