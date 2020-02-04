@@ -20,6 +20,19 @@ To protect your API-keys setting up a backend server with express, using node as
 - cd into the directory install node modules - [npm init] 
 - install production dependencies [npm i axios express]
 - install dev dependencies [npm i --save-dev nodemon dotenv]
+- set up a gitignore file to ignore data from node and the dotenv file
+
+```
+.env
+node_modules
+```
+- in package JSon run your start script
+
+```
+"scripts": {
+		"devStart": "nodemon server.js"
+	},
+```    
 
 ## Version control - GitHub
 
@@ -28,6 +41,7 @@ To protect your API-keys setting up a backend server with express, using node as
 - add and commit initial files
 
 ## Branch 1 server-set-up
+
 Express is a node package that you can download and create a server for development purposes. You can access external API data with the ```fetch API``` or create your own routes from a unique resource locator (URL) with the Express router module.
 
 To connect routes, you set up a local host port and create a route (localhost:3000/name-of-route) for the API calls. This allows you to
@@ -50,8 +64,35 @@ app.get('/', (req, res) => {
 app.listen(port, () => console.log(`server connected on ${port}`));
 ```   
 
- - set up your server and your home route and make sure the route works by going to the local host you have set up and the home page and you should see the text home route working
-
+ - set up your server and your home route and make sure the route works 
+ - run start script 
+```npm run devStart```
+- go to home route
  ```localhost:3000/```
 
- if it does not work, debug at this stage
+if it does not work, debug at this stage
+
+- Once server is connected set up midware -  Use the JSOn parser as midware in the server ```app.use(bodyParser.json());``` to connect the responses and requests which will be transfered in their representational state as a JSOn file. Because the API is a layered system, the order of how the middleware is stacked is important. The request goes first through the parser, then to the routes and then parses the body of the text in the routes. 
+
+```
+    app.use(express.json());
+    app.use(express.static('public'));
+
+    app.get('/', (req, res) => {
+        res.send('home route working');
+    });
+```
+
+Now you are set to set up your environment keys safely
+- check that the dotenv file is in your gitignore file 
+- create a dotenv file to store the keys
+```
+APINAME_API_KEY=<your key>
+```
+- import the dot env files into the express server
+```
+if (process.env.NODE_ENV !== 'production') {
+	require('dotenv').config;
+}
+const APINAME_API_KEY = process.env.APINAME_API_KEY;
+```
