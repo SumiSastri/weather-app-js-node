@@ -2,6 +2,9 @@
 
 This is a simple weather app using 2 external API's Dark Sky and Google. The learning objective is to understand how external API's work and to protect API-keys by building out a backend environment with node.js and a server with express.js
 
+Dark Sky [https://darksky.net/dev]
+Google [https://console.cloud.google.com/getting-started?pli=1]
+
 ## API's
 
 Application Programming Interfaces allow a transfer of data (resources) from clients to servers. Data is transported in Java Script Object Notation(JSON) files or XML files. It is an architectural style used for client-server communications.
@@ -116,3 +119,15 @@ Debugging at this stage
 -  To stop tracking a file that is currently tracked, use git rm --cached set up .env files and ensure they are in gitignore files [https://help.github.com/en/github/using-git/ignoring-files] / [https://git-scm.com/docs/gitignore] username:password - remove <> which are placeholders
 
 Once you can see your dotenv files are not tracked merge the bug branch to master and you can add the API keys safely once you have connected the front end files to the back-end server.
+
+## Branch 3 html-set-up
+[mkdir public folder] cd into folder add the html file and create directories to separate css and js files
+[mkdir css js] add the styles.css and scripts.js files in their respective directories
+Set up your app with the key information you want to extract from the Dark Sky API, check render with a hello world tag and then check the render of each of the elements you are setting up.
+
+## Branch 4 javascript-dom-connections
+
+
+
+
+

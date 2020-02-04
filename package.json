@@ -4,7 +4,7 @@
 	"description": "weather app using node js and vanilla js",
 	"main": "index.js",
 	"scripts": {
-		"devStart": "nodemon server.js"
+		"start": "nodemon server.js"
 	},
 	"author": "srs",
 	"license": "ISC",
