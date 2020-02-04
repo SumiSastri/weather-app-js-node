@@ -14,11 +14,17 @@ An external API allows you to access data from a third-party database with an AP
 
 To protect your API-keys setting up a backend server with express, using node as the environment, API-keys can be saved as a dev dependency and excluded from files that are submitted to github with a gitignore file as well as files that are submitted to a production environment if the app is deployed.
 
-## Scaffolding
+## Scaffolding 
 
-mkdir [name of directory]
-cd into the directory install node modules - [npm init] 
-install production dependencies [npm i axios express]
-install dev dependencies [npm i --save-dev nodemon dotenv]
+- mkdir [name of directory]
+- cd into the directory install node modules - [npm init] 
+- install production dependencies [npm i axios express]
+- install dev dependencies [npm i --save-dev nodemon dotenv]
 
-## Scaffolding
+## Version control - GitHub
+
+- create a git repo
+- link files to origin
+- add and commit initial files
+
+
