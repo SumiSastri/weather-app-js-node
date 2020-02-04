@@ -93,12 +93,26 @@ Now you are set to set up your environment keys safely
 ```
 APINAME_API_KEY=<your key>
 ```
+
+- go to your server.js file and ensure that the .env files are not included in the development files
+
+```
 if (process.env.NODE_ENV !== 'production') {
 	require('dotenv').config();
 }
 const APIKEYNAME_API_KEY = process.env.APIKEYNAME_API_KEY;
 ```
+- Commit files and check that files are not included
+
+## Branch 2 debugging
+
+As soon as you hit a problem set up a debugging branch
 
 Debugging at this stage
-- Commit files and check that files are not included
-To stop tracking a file that is currently tracked, use git rm --cached set up .env files and ensure they are in gitignore files [https://help.github.com/en/github/using-git/ignoring-files] / [https://git-scm.com/docs/gitignore] username:password - remove <> which are placeholders
+- check your gitignore files
+- check your dotenv files (.env)
+- check your code in your server
+- make sure you are using placeholders at this stage APIKEYNAME and <your key> so that when you debug and commit you are not exposing your key
+-  To stop tracking a file that is currently tracked, use git rm --cached set up .env files and ensure they are in gitignore files [https://help.github.com/en/github/using-git/ignoring-files] / [https://git-scm.com/docs/gitignore] username:password - remove <> which are placeholders
+
+Once you can see your dotenv files are not tracked merge the bug branch to master and you can add the API keys safely once you have connected the front end files to the back-end server.
