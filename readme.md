@@ -96,3 +96,9 @@ if (process.env.NODE_ENV !== 'production') {
 }
 const APINAME_API_KEY = process.env.APINAME_API_KEY;
 ```
+
+Debugging at this stage
+- Commit files and check that files are not included
+-  
+
+To stop tracking a file that is currently tracked, use git rm --cached set up .env files and ensure they are in gitignore files [https://help.github.com/en/github/using-git/ignoring-files] / [https://git-scm.com/docs/gitignore] username:password - remove <> which are placeholders
