@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="" rel="stylesheet">
-    <script defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjyrjL65w0MdZpYL2BsDeweXIzUsFIal8&libraries=places"></script>
-    <script defer src="./js/scripts.js"></script>
+   
     <title>Weather-App-js-node</title>
 </head>
 <body>
@@ -18,7 +17,7 @@
 <div class="content">
     <div class="general-information">
         <div class="city-search-container">
-            <input type ="text" class="city-search" placeholder="Type a location">
+            <input type ="text" class="city-search" data-city-search placeholder="Type a location">
         </div>
         <div class="status">Enter a location</div>
         <div class="location">And checkout the weather</div>
@@ -44,4 +43,6 @@
      </div>
  </div>
 </body>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjyrjL65w0MdZpYL2BsDeweXIzUsFIal8&libraries=places"></script>
+<script src="./js/scripts.js"></script>
 </html>

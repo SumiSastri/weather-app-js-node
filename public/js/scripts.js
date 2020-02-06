@@ -1,6 +1,7 @@
 console.log('javascript working');
 // cache DOM
 const searchElement = document.querySelector('[data-city-search]');
+// wait for google API set up to register as new requirements for credit card and user authentication
 const searchBox = new google.maps.places.SearchBox(searchElement);
 searchBox.addListener('places_changed', () => {
 	const place = searchBox.getPlaces()[0];
@@ -8,6 +9,7 @@ searchBox.addListener('places_changed', () => {
 	// store api objects in a variable and stringify in the fetch method
 	const latitude = place.geometry.location.lat();
 	const longitude = place.geometry.location.lng();
+
 	fetch('/weather', {
 		method: 'POST',
 		headers: {
