@@ -2,9 +2,6 @@
 
 This is a simple weather app using 2 external API's Dark Sky and Google. The learning objective is to understand how external API's work and to protect API-keys by building out a backend environment with node.js and a server with express.js
 
-Dark Sky [https://darksky.net/dev]
-Google [https://console.cloud.google.com/getting-started?pli=1]
-
 ## API's
 
 Application Programming Interfaces allow a transfer of data (resources) from clients to servers. Data is transported in Java Script Object Notation(JSON) files or XML files. It is an architectural style used for client-server communications.
@@ -127,7 +124,26 @@ Set up your app with the key information you want to extract from the Dark Sky A
 
 ## Branch 4 javascript-dom-connections
 
+- API set up
+- Set up Dark Sky account and get key
+Dark Sky [https://darksky.net/dev]
 
+- Set up google account and get key 
+    - go to drop-down APIs
+    - API's - select Library
+    - Enable map-javascript api
+    - Enable places api
+    - Go to credentials create an API key
+    - Restrict the key correspondening to the API's you are using and save changes 
+    - 
+Google [https://console.cloud.google.com/getting-started?pli=1]
+Documentation [https://developers.google.com/places/web-service/intro]
+Maps tutorial [https://developers.google.com/maps/documentation/javascript/tutorial] 
+
+- Put the keys into the .env file if you need to pay for them
+- Put the keys into the script files in the html root if you do not need to pay for them
+
+External API's are the back-end of the app, you can read data from the databases, to write, delete and update data to a database you need to create REST-API's - out of scope for this project.
 
 
 

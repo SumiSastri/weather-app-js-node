@@ -14,4 +14,8 @@ app.get('/', (req, res) => {
 	res.send('home route working');
 });
 
+app.post('/weather', (req, res) => {
+	console.log(req.body);
+});
+
 app.listen(port, () => console.log(`server connected on ${port}`));
