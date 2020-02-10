@@ -1,13 +1,36 @@
-body {
+* {
 	margin: 0px;
 	padding: 0px;
+	box-sizing: border-box;
+}
+body {
 	font-family: 'Inconsolata', monospace;
+	height: 100vh;
+	justify-content: center;
+	flex-direction: column;
 }
 .container {
-	margin: 5px;
-	padding: 5px;
+	height: 90vh;
+	width: 93%;
+	margin: 15px;
+	padding: 15px;
 	background: linear-gradient(steelblue, navy);
 	color: burlywood;
+}
+.project-name {
+	width: 80%;
+}
+h1 {
+	font-size: 24px;
+}
+input {
+	height: 25px;
+	width: 80%;
+	border-radius: 5px;
+}
+.detail.section {
+	margin: 10 0 10 5;
+	justify-content: space-between;
 }
 .api-attributions {
 	margin: 100px;
@@ -19,13 +42,4 @@ a {
 	color: blanchedalmond;
 	margin: 5px;
 	padding: 5px;
-}
-
-input {
-	height: 25px;
-	width: 80%;
-	border-radius: 5px;
-}
-.detail.section {
-	margin: 10 0 10 5;
 }

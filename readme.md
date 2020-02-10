@@ -127,6 +127,7 @@ Set up your app with the key information you want to extract from the Dark Sky A
 - API set up
 - Set up Dark Sky account and get key
 Dark Sky [https://darksky.net/dev]
+SkyCons [https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.min.js]
 
 - Set up google account and get key 
     - go to drop-down APIs
