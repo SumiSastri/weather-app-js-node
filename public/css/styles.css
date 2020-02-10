@@ -9,3 +9,23 @@ body {
 	background: linear-gradient(steelblue, navy);
 	color: burlywood;
 }
+.api-attributions {
+	margin: 100px;
+	padding: 100px;
+	display: inline-flex;
+}
+
+a {
+	color: blanchedalmond;
+	margin: 5px;
+	padding: 5px;
+}
+
+input {
+	height: 25px;
+	width: 80%;
+	border-radius: 5px;
+}
+.detail.section {
+	margin: 10 0 10 5;
+}
