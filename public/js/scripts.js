@@ -1,5 +1,12 @@
 console.log('javascript working');
+// cache-DOM - create data-attributes for data from API's
 const searchLocation = document.querySelector('[data-city-search]');
+const location = document.querySelector('[data-location]');
+const status = document.querySelector('[data-status]');
+const temperature = document.querySelector('[data-temperature]');
+const precipitation = document.querySelector('[data-precipitation]');
+const wind = document.querySelector('[data-wind]');
+
 const searchBox = new google.maps.places.SearchBox(searchLocation);
 
 searchBox.addListener('places_changed', () => {

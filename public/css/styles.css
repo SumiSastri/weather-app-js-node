@@ -2,6 +2,10 @@ body {
 	margin: 0px;
 	padding: 0px;
 	font-family: 'Inconsolata', monospace;
+}
+.container {
+	margin: 5px;
+	padding: 5px;
 	background: linear-gradient(steelblue, navy);
 	color: burlywood;
 }
