@@ -1,3 +1,4 @@
+/* Normalise css */
 * {
 	margin: 0px;
 	padding: 0px;
@@ -6,11 +7,15 @@
 body {
 	font-family: 'Inconsolata', monospace;
 	height: 100vh;
-	justify-content: center;
 	flex-direction: column;
+	background-image: url(../assets/project.jpg) no-repeat center center fixed;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
 }
 .container {
-	height: 90vh;
+	height: 95vh;
 	width: 93%;
 	margin: 15px;
 	padding: 15px;
@@ -23,23 +28,45 @@ body {
 h1 {
 	font-size: 24px;
 }
+
 input {
 	height: 25px;
-	width: 80%;
+	width: 100%;
 	border-radius: 5px;
 }
 .detail.section {
 	margin: 10 0 10 5;
 	justify-content: space-between;
 }
+.icon-container {
+	height: 225px;
+	width: auto;
+	background-color: lightgray;
+	border-radius: 50%;
+	padding: 15px;
+	margin: 15px;
+	position: relative;
+}
+.general-information {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px;
+}
+.header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px;
+}
 .api-attributions {
-	margin: 100px;
-	padding: 100px;
+	margin: 10px;
+	padding: 10px;
 	display: inline-flex;
 }
 
 a {
-	color: blanchedalmond;
+	color: lightslategray;
 	margin: 5px;
 	padding: 5px;
 }
