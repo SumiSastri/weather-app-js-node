@@ -1,19 +1,4 @@
 console.log('javascript working');
-// const daysOfTheWeek = [ 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat' ];
-// const monthsOfTheYear = [
-// 	'January',
-// 	'February,',
-// 	'March',
-// 	'April',
-// 	'May',
-// 	'June',
-// 	'July',
-// 	'Aug',
-// 	'Sept',
-// 	'Oct',
-// 	'Nov',
-// 	'Dec'
-// ];
 const searchLocation = document.querySelector('[data-city-search]');
 const searchBox = new google.maps.places.SearchBox(searchLocation);
 searchBox.addListener('places_changed', () => {
@@ -47,10 +32,6 @@ const updateSummary = document.querySelector('[data-summary]');
 const updateTemperature = document.querySelector('[data-temperature]');
 const updatePrecipitation = document.querySelector('[data-precipitation]');
 const updateWind = document.querySelector('[data-wind]');
-// const timeStamp = new Date(data.currently.time * 1000);
-// const forecastDate = `${daysOfTheWeek[timeStamp.getDay()]} ${monthsOfTheYear[
-// 	timeStamp.getMonth()
-// ]} ${timeStamp.getDate()}}`;
 
 function setWeatherData(data, place) {
 	updateLocation.textContent = place;
@@ -61,3 +42,24 @@ function setWeatherData(data, place) {
 	icon.set('icon', data.icon);
 	icon.play();
 }
+
+// DATE display - trial code
+// const daysOfTheWeek = [ 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat' ];
+// const monthsOfTheYear = [
+// 	'January',
+// 	'February,',
+// 	'March',
+// 	'April',
+// 	'May',
+// 	'June',
+// 	'July',
+// 	'Aug',
+// 	'Sept',
+// 	'Oct',
+// 	'Nov',
+// 	'Dec'
+// ];
+// const timeStamp = new Date(data.currently.time * 1000);
+// const forecastDate = `${daysOfTheWeek[timeStamp.getDay()]} ${monthsOfTheYear[
+// 	timeStamp.getMonth()
+// ]} ${timeStamp.getDate()}}`;

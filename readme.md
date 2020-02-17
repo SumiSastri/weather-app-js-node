@@ -66,7 +66,7 @@ app.listen(port, () => console.log(`server connected on ${port}`));
 
  - set up your server and your home route and make sure the route works 
  - run start script 
-```npm run devStart```
+```npm run start```
 - go to home route
  ```localhost:3000/```
 
@@ -146,5 +146,35 @@ Maps tutorial [https://developers.google.com/maps/documentation/javascript/tutor
 
 External API's are the back-end of the app, you can read data from the databases, to write, delete and update data to a database you need to create REST-API's - out of scope for this project.
 
+CHALLENGES WITH GOOGLE API  - there are several challenges with google maps - now layers of authentication are needed even for developers, this resulted in the app working intermittenly as the API key was not recognised - not sure of what the fix to this is.
+
+The search box accesses the google API and an event listener listens to the change in the input box and brings up the location in the API
+
+```
+const searchLocation = document.querySelector('[data-city-search]');
+const searchBox = new google.maps.places.SearchBox(searchLocation);
+searchBox.addListener('places_changed', () => {
+	const place = searchBox.getPlaces()[0];
+	if (place == null) return;
+	const latitude = place.geometry.location.lat();
+	const longitude = place.geometry.location.lng();
+ ```   
+
+The fetch api calls the Dark Sky API and your main factory function - ```setWeatherData()```  this function updates the textContent of the node in the DOM where you are displaying the API information. A ```Math.round``` method is needed to round up the numbers.
+
+```
+function setWeatherData(data, place) {
+	updateLocation.textContent = place;
+	updateSummary.textContent = `Summary: ${data.summary}`;
+	updateTemperature.textContent = `Temperature: ${Math.round(data.temperature)} degrees`;
+	updatePrecipitation.textContent = `Likelihood of rain: ${Math.round(data.precipProbability * 100)}%`;
+	updateWind.textContent = `Wind Speed (miles/km ph): ${Math.round(data.windSpeed)}`;
+	icon.set('icon', data.icon);
+	icon.play();
+}
+```
 
 
+## Branch 5 styling
+
+Style according to preference once app works.
