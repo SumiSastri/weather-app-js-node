@@ -1,5 +1,5 @@
 ## Weather-app using node.js and vanilla javascript
-
+![WeatherApp-JavaScript-Node](public/assets/weather-app-screen-shot.png)
 This is a simple weather app using 2 external API's Dark Sky and Google. The learning objective is to understand how external API's work and to protect API-keys by building out a backend environment with node.js and a server with express.js
 
 ## API's
